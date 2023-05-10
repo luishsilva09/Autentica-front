@@ -7,7 +7,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route Component={Login} path="/login" />
+          <Route Component={Login} path="/" />
           <Route Component={Register} path="/register" />
         </Routes>
       </BrowserRouter>
