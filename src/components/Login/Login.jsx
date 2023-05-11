@@ -5,7 +5,7 @@ export default function Login() {
   return (
     <Container>
       <BoxLogin>
-        <p>Login</p>
+        <h1>Login</h1>
         <LoginForm />
       </BoxLogin>
     </Container>
@@ -28,7 +28,7 @@ const BoxLogin = styled.div`
   border-radius: 50px;
   padding: 1%;
 
-  p {
+  h1 {
     font-size: 30px;
     width: 100%;
     text-align: center;
