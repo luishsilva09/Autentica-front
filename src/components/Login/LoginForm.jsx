@@ -1,15 +1,40 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import api from "../../services/Api";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function LoginForm() {
+  const [load, setLoad] = useState(false);
+  const [loginError, setLoginError] = useState(false);
+
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+  });
+  async function sendLogin(event) {
+    event.preventDefault();
+    setLoad(true);
+    await api
+      .post("/login", userData)
+      .then((e) => {
+        console.log(e);
+        setLoginError(false);
+      })
+      .catch(() => setLoginError(true));
+    setLoad(false);
+    console.log("login");
+  }
   return (
-    <LoginForms>
+    <LoginForms onSubmit={(event) => sendLogin(event)}>
       <label htmlFor="email">Email:</label>
       <input
         id="email"
         type="email"
         name="email"
         placeholder="Email..."
+        value={userData.email}
+        onChange={(e) => setUserData({ ...userData, email: e.target.value })}
       ></input>
       <label htmlFor="password">Password:</label>
       <input
@@ -17,8 +42,19 @@ export default function LoginForm() {
         type="password"
         name="pasword"
         placeholder="Password..."
+        value={userData.password}
+        onChange={(e) => setUserData({ ...userData, password: e.target.value })}
       ></input>
-      <button type="submit">Login</button>
+      <button type="submit">
+        {load ? <ThreeDots color="#000706" /> : <>Login</>}
+      </button>
+      <p>
+        {loginError ? (
+          <>Email ou senha incorreto, verifique seus dados</>
+        ) : (
+          <></>
+        )}
+      </p>
       <Link to="/forgetPassword">Esqueci minha senha</Link>
       <Link to="/register">Ainda não possui cadastro?</Link>
     </LoginForms>
@@ -55,6 +91,12 @@ const LoginForms = styled.form`
       text-decoration: underline;
     }
   }
+  p {
+    color: red;
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+  }
 
   button {
     height: 70px;
@@ -63,6 +105,9 @@ const LoginForms = styled.form`
     font-size: large;
     background-color: #bfac8b;
     border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       cursor: pointer;
