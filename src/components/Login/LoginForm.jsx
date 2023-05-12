@@ -103,7 +103,7 @@ const LoginForms = styled.form`
     }
   }
   @media (max-width: 600px) {
-    height: 85%;
+    height: 70%;
 
     button {
       margin-top: 10%;
