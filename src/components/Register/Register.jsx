@@ -8,7 +8,7 @@ export default function Register() {
       <BoxLogin>
         <h1>Register</h1>
         <RegisterForm />
-        <Link to="/register">Já possui cadastro? Entre aqui.</Link>
+        <Link to="/">Já possui cadastro? Entre aqui.</Link>
       </BoxLogin>
     </Container>
   );
