@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LoginForm from "./LoginForm";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -7,6 +8,8 @@ export default function Login() {
       <BoxLogin>
         <h1>Login</h1>
         <LoginForm />
+        <Link to="/forgetPassword">Esqueci minha senha</Link>
+        <Link to="/register">Ainda não possui cadastro?</Link>
       </BoxLogin>
     </Container>
   );
@@ -27,7 +30,21 @@ const BoxLogin = styled.div`
   width: 450px;
   border-radius: 50px;
   padding: 1%;
+  display: flex;
+  flex-direction: column;
 
+  a {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    color: #ffff;
+    margin-top: 5%;
+    &:hover {
+      cursor: pointer;
+      filter: brightness(130%);
+      text-decoration: underline;
+    }
+  }
   h1 {
     font-size: 30px;
     width: 100%;
