@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import api from "../../services/Api";
 import { ThreeDots } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginForm() {
   const [load, setLoad] = useState(false);
   const [loginError, setLoginError] = useState(false);
+  const navigate = useNavigate();
 
   const [userData, setUserData] = useState({
     email: "",
@@ -18,8 +19,9 @@ export default function LoginForm() {
     await api
       .post("/login", userData)
       .then((e) => {
-        console.log(e);
+        console.log(e.data);
         setLoginError(false);
+        navigate("/end");
       })
       .catch(() => setLoginError(true));
     setLoad(false);
@@ -55,8 +57,6 @@ export default function LoginForm() {
           <></>
         )}
       </p>
-      <Link to="/forgetPassword">Esqueci minha senha</Link>
-      <Link to="/register">Ainda não possui cadastro?</Link>
     </LoginForms>
   );
 }
@@ -79,18 +79,6 @@ const LoginForms = styled.form`
     color: #ffff;
   }
 
-  a {
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    color: #ffff;
-    margin-top: 5%;
-    &:hover {
-      cursor: pointer;
-      filter: brightness(130%);
-      text-decoration: underline;
-    }
-  }
   p {
     color: red;
     font-size: 19px;
