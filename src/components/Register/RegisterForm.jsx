@@ -4,7 +4,7 @@ import api from "../../services/Api";
 import { ThreeDots } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 
-export default function LoginForm() {
+export default function RegisterForm() {
   const [load, setLoad] = useState(false);
   const [registerError, setregisterError] = useState(false);
   const navigate = useNavigate();

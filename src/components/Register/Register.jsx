@@ -5,11 +5,11 @@ import RegisterForm from "./RegisterForm";
 export default function Register() {
   return (
     <Container>
-      <BoxLogin>
+      <BoxRegister>
         <h1>Register</h1>
         <RegisterForm />
         <Link to="/">Já possui cadastro? Entre aqui.</Link>
-      </BoxLogin>
+      </BoxRegister>
     </Container>
   );
 }
@@ -23,7 +23,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const BoxLogin = styled.div`
+const BoxRegister = styled.div`
   background-color: #134647;
   height: 65%;
   width: 450px;
