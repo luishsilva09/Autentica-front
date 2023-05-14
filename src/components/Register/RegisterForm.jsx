@@ -30,7 +30,7 @@ export default function RegisterForm() {
     console.log("Registro");
   }
   return (
-    <LoginForms onSubmit={(event) => sendRegister(event)}>
+    <RegisterForms onSubmit={(event) => sendRegister(event)}>
       <label htmlFor="email">Email:</label>
       <input
         id="email"
@@ -64,11 +64,11 @@ export default function RegisterForm() {
         {load ? <ThreeDots color="#000706" /> : <>Register</>}
       </button>
       <p>{registerError ? <>Verifique seus dados</> : <></>}</p>
-    </LoginForms>
+    </RegisterForms>
   );
 }
 
-const LoginForms = styled.form`
+const RegisterForms = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 5%;
