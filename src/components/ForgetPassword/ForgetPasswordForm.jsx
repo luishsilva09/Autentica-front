@@ -2,12 +2,10 @@ import styled from "styled-components";
 import { useState } from "react";
 import api from "../../services/Api";
 import { ThreeDots } from "react-loader-spinner";
-import { useNavigate } from "react-router-dom";
 
 export default function ForgetPassword() {
   const [load, setLoad] = useState(false);
   const [userSucess, setuserSucess] = useState(false);
-  const navigate = useNavigate();
 
   const [userData, setUserData] = useState({
     email: "",
@@ -25,7 +23,7 @@ export default function ForgetPassword() {
     setLoad(false);
   }
   return (
-    <LoginForms onSubmit={(event) => sendReset(event)}>
+    <ForgetPasswordForm onSubmit={(event) => sendReset(event)}>
       <label htmlFor="email">Email:</label>
       <input
         id="email"
@@ -39,11 +37,11 @@ export default function ForgetPassword() {
         {load ? <ThreeDots color="#000706" /> : <>Send</>}
       </button>
       <p>{userSucess ? <>verifique seu email</> : <></>}</p>
-    </LoginForms>
+    </ForgetPasswordForm>
   );
 }
 
-const LoginForms = styled.form`
+const ForgetPasswordForm = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 10%;

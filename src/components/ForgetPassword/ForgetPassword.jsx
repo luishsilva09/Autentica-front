@@ -5,7 +5,7 @@ export default function ForgetPassword() {
   return (
     <Container>
       <Box>
-        <h1>Reset password</h1>
+        <h1>Forget password</h1>
         <ForgetPasswordForm />
       </Box>
     </Container>
