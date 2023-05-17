@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ForgetPasswordForm from "./ForgetPasswordForm";
+import { Link } from "react-router-dom";
 
 export default function ForgetPassword() {
   return (
@@ -7,6 +8,7 @@ export default function ForgetPassword() {
       <Box>
         <h1>Forget password</h1>
         <ForgetPasswordForm />
+        <Link to="/">Home</Link>
       </Box>
     </Container>
   );
@@ -22,7 +24,7 @@ const Container = styled.div`
 
 const Box = styled.div`
   background-color: #134647;
-  height: 40%;
+  height: 45%;
   width: 450px;
   border-radius: 50px;
   padding: 1%;

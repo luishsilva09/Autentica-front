@@ -83,6 +83,6 @@ const ForgetPasswordForm = styled.form`
     }
   }
   @media (max-width: 600px) {
-    height: 70%;
+    height: 60%;
   }
 `;
