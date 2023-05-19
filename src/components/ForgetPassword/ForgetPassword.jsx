@@ -51,7 +51,8 @@ const Box = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 40%;
+    height: 35%;
+    padding: 4%;
   }
   @media (max-height: 600px) {
     height: 100vh;

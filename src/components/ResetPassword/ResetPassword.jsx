@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ResetForm from "./ResetForm";
+import { Link } from "react-router-dom";
 
 export default function ResetPassword() {
   return (
@@ -7,6 +8,7 @@ export default function ResetPassword() {
       <BoxReset>
         <h1>Reset password</h1>
         <ResetForm />
+        <Link to="/">Home</Link>
       </BoxReset>
     </Container>
   );
@@ -35,7 +37,7 @@ const BoxReset = styled.div`
     text-align: center;
     width: 100%;
     color: #ffff;
-    margin-top: 5%;
+    margin-top: 5px;
     &:hover {
       cursor: pointer;
       filter: brightness(130%);
@@ -50,7 +52,8 @@ const BoxReset = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 65%;
+    height: 48%;
+    padding: 4%;
   }
   @media (max-height: 600px) {
     height: 100vh;

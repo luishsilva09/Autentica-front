@@ -44,7 +44,7 @@ export default function ForgetPassword() {
 const ForgetPasswordForm = styled.form`
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 5%;
   padding: 10px;
 
   input {
@@ -83,6 +83,6 @@ const ForgetPasswordForm = styled.form`
     }
   }
   @media (max-width: 600px) {
-    height: 60%;
+    height: 100%;
   }
 `;

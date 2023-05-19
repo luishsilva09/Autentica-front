@@ -61,7 +61,7 @@ export default function ResetForm() {
 const LoginForms = styled.form`
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 5%;
   padding: 10px;
 
   input {
@@ -100,10 +100,10 @@ const LoginForms = styled.form`
     }
   }
   @media (max-width: 600px) {
-    height: 70%;
+    height: 100%;
 
     button {
-      margin-top: 10%;
+      margin-top: 10px;
     }
   }
 `;
