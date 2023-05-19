@@ -25,7 +25,7 @@ const Container = styled.div`
 
 const BoxRegister = styled.div`
   background-color: #134647;
-  height: 65%;
+  height: 70%;
   width: 450px;
   border-radius: 50px;
   padding: 1%;
@@ -37,7 +37,7 @@ const BoxRegister = styled.div`
     text-align: center;
     width: 100%;
     color: #ffff;
-    margin-top: 5%;
+    margin-top: 5px;
     &:hover {
       cursor: pointer;
       filter: brightness(130%);
@@ -52,7 +52,8 @@ const BoxRegister = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 65%;
+    height: 55%;
+    padding: 4%;
   }
   @media (max-height: 600px) {
     height: 100vh;

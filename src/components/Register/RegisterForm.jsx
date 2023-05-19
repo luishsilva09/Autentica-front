@@ -110,10 +110,10 @@ const RegisterForms = styled.form`
     }
   }
   @media (max-width: 600px) {
-    height: 70%;
+    height: 100%;
 
     button {
-      margin-top: 10%;
+      margin-top: 10px;
     }
   }
 `;
