@@ -38,7 +38,7 @@ const BoxLogin = styled.div`
     text-align: center;
     width: 100%;
     color: #ffff;
-    margin-top: 5%;
+    margin-top: 5px;
     &:hover {
       cursor: pointer;
       filter: brightness(130%);
@@ -53,7 +53,8 @@ const BoxLogin = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 65%;
+    height: 50%;
+    padding: 4%;
   }
   @media (max-height: 600px) {
     height: 100vh;
