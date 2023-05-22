@@ -13,6 +13,7 @@ export default function ResetForm() {
   const [userData, setUserData] = useState({
     email: "",
     newPassword: "",
+    repeatNewPassword: "",
   });
   async function sendReset(event) {
     event.preventDefault();
@@ -53,12 +54,12 @@ export default function ResetForm() {
       <label htmlFor="repeaPassword">Repeat password:</label>
       <input
         id="repeatPassword"
-        type="repeatPassword"
+        type="password"
         name="repeatPasword"
         placeholder="Repeat new password..."
-        value={userData.newPassword}
+        value={userData.repeatNewPassword}
         onChange={(e) =>
-          setUserData({ ...userData, newPassword: e.target.value })
+          setUserData({ ...userData, repeatNewPassword: e.target.value })
         }
       ></input>
       <button type="submit">
