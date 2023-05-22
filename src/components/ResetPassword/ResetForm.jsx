@@ -50,6 +50,17 @@ export default function ResetForm() {
           setUserData({ ...userData, newPassword: e.target.value })
         }
       ></input>
+      <label htmlFor="repeaPassword">Repeat password:</label>
+      <input
+        id="repeatPassword"
+        type="repeatPassword"
+        name="repeatPasword"
+        placeholder="Repeat new password..."
+        value={userData.newPassword}
+        onChange={(e) =>
+          setUserData({ ...userData, newPassword: e.target.value })
+        }
+      ></input>
       <button type="submit">
         {load ? <ThreeDots color="#000706" /> : <>Reset</>}
       </button>

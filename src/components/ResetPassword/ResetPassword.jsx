@@ -25,7 +25,7 @@ const Container = styled.div`
 
 const BoxReset = styled.div`
   background-color: #134647;
-  height: 65%;
+  height: 78%;
   width: 450px;
   border-radius: 50px;
   padding: 1%;
@@ -52,7 +52,7 @@ const BoxReset = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 48%;
+    height: 62%;
     padding: 4%;
   }
   @media (max-height: 600px) {
