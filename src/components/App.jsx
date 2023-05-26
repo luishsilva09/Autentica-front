@@ -5,6 +5,7 @@ import Register from "./Register/Register";
 import End from "./End/End";
 import ForgetPassword from "./ForgetPassword/ForgetPassword";
 import ResetPassword from "./ResetPassword/ResetPassword";
+import TwoFactorAuth from "./TwofactorAuth/TwoFactorAuth";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route Component={Register} path="/register" />
           <Route Component={ForgetPassword} path="/forgetPassword" />
           <Route Component={ResetPassword} path="/resetPassword/:resetToken" />
+          <Route Component={TwoFactorAuth} path="/twoFactorAuth/enable" />
           <Route Component={End} path="/end" />
         </Routes>
       </BrowserRouter>
