@@ -20,6 +20,7 @@ export default function LoginForm() {
       .post("/login", userData)
       .then((e) => {
         console.log(e.data);
+        localStorage.setItem("token", e.data.token);
         setLoginError(false);
         navigate("/end");
       })
