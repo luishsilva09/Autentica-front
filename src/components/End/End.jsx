@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export default function End() {
   return (
     <Container>
       <h1>Congrats!!!</h1>
       <h2>All good.</h2>
+      <Link to="/twoFactorAuth/enable">ativar dois fatores</Link>
     </Container>
   );
 }
