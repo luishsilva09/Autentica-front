@@ -32,6 +32,7 @@ const BoxLogin = styled.div`
   padding: 1%;
   display: flex;
   flex-direction: column;
+  max-height: 450px;
 
   a {
     text-decoration: none;
@@ -53,8 +54,8 @@ const BoxLogin = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 50%;
     padding: 4%;
+    max-height: 500px;
   }
   @media (max-height: 600px) {
     height: 100vh;
