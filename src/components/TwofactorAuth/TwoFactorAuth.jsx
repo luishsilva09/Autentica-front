@@ -15,10 +15,10 @@ export default function TwoFactorAuth() {
     event.preventDefault();
     await api
       .post("/twoFactorAuth/verify", { token }, config)
-      .then((e) => {
+      .then(() => {
         console.log("validado com sucesso");
       })
-      .catch((e) => console.log("nao foi possivel validar"));
+      .catch(() => console.log("nao foi possivel validar"));
   }
 
   useEffect(() => {
