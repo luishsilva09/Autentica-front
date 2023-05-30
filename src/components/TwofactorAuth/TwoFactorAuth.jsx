@@ -47,7 +47,7 @@ export default function TwoFactorAuth() {
             placeholder="PIN"
             onChange={(e) => setToken(e.target.value)}
           ></input>
-          <button type="submit">enviar</button>
+          <button type="submit">Ativar</button>
         </form>
       </Box>
     </Container>
@@ -72,6 +72,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 400px;
 
   img {
     height: 200px;
