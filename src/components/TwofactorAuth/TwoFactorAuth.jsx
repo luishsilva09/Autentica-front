@@ -29,6 +29,7 @@ export default function TwoFactorAuth() {
         QRCode.toDataURL(e.data.otpauth_url, function (err, dataUrl) {
           console.log(dataUrl);
           setUrl(dataUrl);
+          navigate("/end");
         });
       })
       .catch((err) => {
