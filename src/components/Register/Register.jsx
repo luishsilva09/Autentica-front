@@ -31,6 +31,7 @@ const BoxRegister = styled.div`
   padding: 1%;
   display: flex;
   flex-direction: column;
+  max-height: 500px;
 
   a {
     text-decoration: none;
