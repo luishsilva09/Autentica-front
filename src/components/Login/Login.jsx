@@ -57,7 +57,7 @@ const BoxLogin = styled.div`
     padding: 4%;
     max-height: 500px;
   }
-  @media (max-height: 600px) {
+  @media (max-height: 700px) {
     height: 100vh;
   }
 `;

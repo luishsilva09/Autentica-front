@@ -24,19 +24,20 @@ const Container = styled.div`
 
 const Box = styled.div`
   background-color: #134647;
-  height: 45%;
+  height: 40%;
   width: 450px;
   border-radius: 50px;
   padding: 1%;
   display: flex;
   flex-direction: column;
+  max-height: 300px;
 
   a {
     text-decoration: none;
     text-align: center;
     width: 100%;
     color: #ffff;
-    margin-top: 5%;
+    margin-top: 5px;
     &:hover {
       cursor: pointer;
       filter: brightness(130%);
@@ -51,10 +52,11 @@ const Box = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 35%;
-    padding: 4%;
+    height: 37%;
+    max-height: 300px;
+    padding: 2%;
   }
-  @media (max-height: 600px) {
+  @media (max-height: 700px) {
     height: 100vh;
   }
 `;

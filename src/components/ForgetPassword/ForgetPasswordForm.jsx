@@ -49,7 +49,7 @@ const ForgetPasswordForm = styled.form`
 
   input {
     height: 50px;
-    margin: 1% 0 10% 0;
+    margin: 1% 0 5% 0;
     border-radius: 30px;
     border: none;
     padding: 10px;
@@ -82,7 +82,11 @@ const ForgetPasswordForm = styled.form`
       filter: brightness(130%);
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     height: 100%;
+
+    button {
+      margin-top: 10px;
+    }
   }
 `;

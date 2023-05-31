@@ -53,10 +53,11 @@ const BoxRegister = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 55%;
+    max-height: 550px;
+    height: 65%;
     padding: 4%;
   }
-  @media (max-height: 600px) {
+  @media (max-height: 700px) {
     height: 100vh;
   }
 `;
