@@ -3,6 +3,7 @@ import { useState } from "react";
 import api from "../../services/Api";
 import { ThreeDots } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
 
 export default function LoginForm() {
   const [load, setLoad] = useState(false);
@@ -13,21 +14,26 @@ export default function LoginForm() {
     email: "",
     password: "",
   });
+
   async function sendLogin(event) {
     event.preventDefault();
     setLoad(true);
     await api
       .post("/login", userData)
       .then((e) => {
-        console.log(e.data);
         localStorage.setItem("token", e.data.token);
+        const decodeUserData = jwt_decode(e.data.token);
         setLoginError(false);
-        navigate("/end");
+        if (decodeUserData.twoFactorAuth) {
+          navigate("/twoFactorAuth/verify");
+        } else {
+          navigate("/end");
+        }
       })
       .catch(() => setLoginError(true));
     setLoad(false);
-    console.log("login");
   }
+
   return (
     <LoginForms onSubmit={(event) => sendLogin(event)}>
       <label htmlFor="email">Email:</label>
