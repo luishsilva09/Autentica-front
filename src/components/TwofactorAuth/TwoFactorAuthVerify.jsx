@@ -56,7 +56,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 200px;
+  min-height: 220px;
 
   input {
     height: 50px;
