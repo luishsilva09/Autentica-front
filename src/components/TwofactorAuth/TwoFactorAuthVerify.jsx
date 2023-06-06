@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function TwofactorAuthVerify() {
   const [token, setToken] = useState({ token: "" });
   const navigate = useNavigate();
+  const [errorVerify, setErrorVerify] = useState(false);
   const config = {
     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
   };
@@ -30,6 +31,7 @@ export default function TwofactorAuthVerify() {
             onChange={(e) => setToken({ ...token, token: e.target.value })}
           ></input>
           <button type="submit">Verificar</button>
+          <p>{errorVerify ? <>Dados inválido</> : <></>}</p>
         </form>
       </Box>
     </Container>
@@ -63,6 +65,14 @@ const Box = styled.div`
     border: none;
     padding: 10px;
   }
+  p {
+    color: red;
+    font-size: 19px;
+    width: 100%;
+    text-align: center;
+    margin-top: 3px;
+  }
+
   form {
     width: 100%;
     display: flex;
