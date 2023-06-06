@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 import api from "../../services/Api";
+import { useNavigate } from "react-router-dom";
 
 export default function TwofactorAuthVerify() {
   const [token, setToken] = useState({ token: "" });
+  const navigate = useNavigate();
   const config = {
     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
   };
@@ -12,8 +14,8 @@ export default function TwofactorAuthVerify() {
     event.preventDefault();
     await api
       .post("/twoFactorAuth/verify", token, config)
-      .then(() => console.log("deu bom"))
-      .catch(() => console.log("nao deu bom"));
+      .then(() => navigate("/end"))
+      .catch(() => setErrorVerify(true));
   }
   return (
     <Container>
