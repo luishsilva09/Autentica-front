@@ -7,11 +7,13 @@ import ForgetPassword from "./ForgetPassword/ForgetPassword";
 import ResetPassword from "./ResetPassword/ResetPassword";
 import TwoFactorAuth from "./TwofactorAuth/TwoFactorAuth";
 import TwofactorAuthVerify from "./TwofactorAuth/TwoFactorAuthVerify";
+import GlobalStyle from "../assets/globalStyle";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <GlobalStyle />
         <Routes>
           <Route Component={Login} path="/" />
           <Route Component={Register} path="/register" />
