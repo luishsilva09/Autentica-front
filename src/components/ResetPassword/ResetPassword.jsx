@@ -31,6 +31,7 @@ const BoxReset = styled.div`
   padding: 1%;
   display: flex;
   flex-direction: column;
+  max-height: 550px;
 
   h1 {
     font-size: 30px;
@@ -40,7 +41,6 @@ const BoxReset = styled.div`
 
   @media (max-width: 600px) {
     width: 100vw;
-    height: 62%;
     padding: 4%;
   }
   @media (max-height: 600px) {
